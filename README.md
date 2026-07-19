@@ -42,7 +42,7 @@
 需求:Python 3.9+ 已安裝並加入 PATH。
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/netmon.git
+git clone https://github.com/szpk666/net-monitor.git
 cd netmon
 pip install -r requirements.txt
 python tray_app.py
@@ -150,12 +150,3 @@ crontab -e
 
 需要手動從 `config.example.json` 複製一份 `config.json` 並編輯。這個模式沒有即時 Dashboard,要另外跑 `python main.py --mode report` 產生 HTML。
 
-## 授權
-
-MIT License,詳見 [LICENSE](LICENSE)。
-
-## 致謝
-
-概念參考自 [ahui3c/NetCheckMonitor](https://github.com/ahui3c/NetCheckMonitor),這個專案在斷線偵測跟報表視覺化上補上了內外分層、可自訂異常條件、Telegram 即時告警、跨平台支援。
-
-歡迎 issue / PR。
