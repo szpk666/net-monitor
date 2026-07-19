@@ -59,34 +59,6 @@ pyinstaller --onefile --windowed --name NetMon tray_app.py
 
 執行檔會出現在 `dist\NetMon.exe`。想要開機自動啟動,把這個檔案的**捷徑**丟進 `shell:startup` 資料夾(Win+R 打開輸入 `shell:startup`)。
 
-### Termux(手機常駐)
-
-想用閒置手機當 24h 監控裝置的話,適合這個模式:
-
-```bash
-pkg update && pkg upgrade -y
-pkg install python git -y
-git clone https://github.com/YOUR_USERNAME/netmon.git
-cd netmon
-python app.py
-```
-
-打開終端機印出的網址(手機自己是 `http://127.0.0.1:8787`,同網段其他裝置用區網 IP)。設定流程跟 Windows 版一樣。
-
-想手機重開機也自動啟動,加裝 [Termux:Boot](https://f-droid.org/en/packages/com.termux.boot/)(F-Droid 版),然後:
-
-```bash
-mkdir -p ~/.termux/boot
-cat > ~/.termux/boot/netmon.sh << 'EOF'
-#!/data/data/com.termux/files/usr/bin/bash
-termux-wake-lock
-cd ~/netmon && nohup python app.py >> app.log 2>&1 &
-EOF
-chmod +x ~/.termux/boot/netmon.sh
-```
-
-**重要**:記得到系統設定把 Termux 從電池最佳化白名單排除,並開啟開發者選項的「充電時不休眠」,不然背景會被系統砍掉。
-
 ## Telegram 通知設定
 
 1. 在 Telegram 找 `@BotFather` 開一個 bot,拿到 Token
