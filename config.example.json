@@ -1,0 +1,25 @@
+{
+  "gateway_ip": "",
+  "endpoints": [
+    "https://www.google.com",
+    "https://www.cloudflare.com",
+    "https://www.microsoft.com"
+  ],
+  "ping_timeout": 3,
+  "http_timeout": 5,
+  "check_interval_sec": 60,
+
+  "anomaly_check_router_latency": true,
+  "anomaly_router_latency_ms": 100,
+  "anomaly_check_download_speed": true,
+  "anomaly_download_min_mbps": 50,
+  "anomaly_check_asymmetric": true,
+  "anomaly_asymmetric_ratio": 0.5,
+
+  "telegram_bot_token": "",
+  "telegram_chat_id": "",
+  "monitoring_paused": false,
+
+  "db_path": "netmon.db",
+  "report_path": "report.html"
+}
