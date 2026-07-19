@@ -2,8 +2,6 @@
 
 輕量的家用網路品質監控工具,幫你抓出「網路怪怪的」到底是路由器問題、Wi-Fi 問題,還是 ISP 問題。定時檢查連線狀態、跑測速、記錄斷線,異常時透過 Telegram 通知你。
 
-![Dashboard](docs/dashboard.png)
-> _執行後把你自己的 Dashboard 截圖存成 `docs/dashboard.png` 讓別人看到成品_
 
 ## 為什麼做這個?
 
